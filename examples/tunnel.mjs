@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { Tunnel, bin, install } from "cloudflared";
+import { Tunnel, bin, install } from "@atlassian/cloudflared";
 
 console.log("Cloudflared Tunnel Example.");
 main();

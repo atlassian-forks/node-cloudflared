@@ -12,6 +12,9 @@ importers:
 
   .:
     devDependencies:
+      '@atlassian/cloudflared':
+        specifier: workspace:*
+        version: 'link:'
       '@changesets/changelog-github':
         specifier: ^0.7.0
         version: 0.7.0
@@ -33,9 +36,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: ~8.66.0
         version: 8.66.0(eslint@10.8.1)(typescript@6.0.3)
-      cloudflared:
-        specifier: workspace:*
-        version: 'link:'
       eslint:
         specifier: ^10.8.1
         version: 10.8.1

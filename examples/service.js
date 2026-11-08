@@ -1,4 +1,4 @@
-const { service } = require("cloudflared");
+const { service } = require("@atlassian/cloudflared");
 
 console.log("Cloudflared Service Example.");
 main();

@@ -1,4 +1,10 @@
-# cloudflared
+# (fork of) cloudflared
+
+This is Atlassian's fork of the original
+[node-cloudflared](https://github.com/JacobLinCool/node-cloudflared/). It is
+published as [`@atlassian/cloudflared`](https://www.npmjs.com/package/@atlassian/cloudflared)
+on npm. Changes are proposed upstream first; this fork exists so they can be
+used before they are released there.
 
 A Node.js package that allows you to easily create HTTPS tunnels using Cloudflare's `cloudflared` command-line tool. It provides a typed API for creating tunnels and managing the `cloudflared` binary installation.
 
@@ -57,7 +63,7 @@ You can also use it as a library in your TypeScript / JavaScript projects.
 You can get the path of the `cloudflared` binary and install it using the `bin` and `install` functions, respectively.
 
 ```js
-import { bin, install } from "cloudflared";
+import { bin, install } from "@atlassian/cloudflared";
 import fs from "node:fs";
 import { spawn } from "node:child_process";
 
@@ -80,7 +86,7 @@ Checkout [`examples/tunnel.mjs`](examples/tunnel.mjs) (or [`examples/tunnel.js`]
 `Tunnel` is inherited from `EventEmitter`, so you can listen to the events it emits, checkout [`examples/events.mjs`](examples/events.mjs).
 
 ```js
-import { Tunnel } from "cloudflared";
+import { Tunnel } from "@atlassian/cloudflared";
 
 console.log("Cloudflared Tunnel Example.");
 main();
@@ -123,7 +129,7 @@ tunnel process exited with code 0
 Checkout [`examples/service.mjs`](examples/service.mjs) (or [`examples/service.js`](examples/service.js) for CommonJS).
 
 ```js
-import { service } from "cloudflared";
+import { service } from "@atlassian/cloudflared";
 
 console.log("Cloudflared Service Example.");
 main();

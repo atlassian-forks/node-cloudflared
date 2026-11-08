@@ -1,4 +1,4 @@
-import { Tunnel, ConfigHandler } from "cloudflared";
+import { Tunnel, ConfigHandler } from "@atlassian/cloudflared";
 
 const token = process.env.CLOUDFLARED_TOKEN;
 if (!token) {

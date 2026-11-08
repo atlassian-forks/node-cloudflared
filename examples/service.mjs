@@ -1,4 +1,4 @@
-import { service } from "cloudflared";
+import { service } from "@atlassian/cloudflared";
 
 console.log("Cloudflared Service Example.");
 main();

@@ -1,5 +1,5 @@
 const fs = require("node:fs");
-const { Tunnel, bin, install } = require("cloudflared");
+const { Tunnel, bin, install } = require("@atlassian/cloudflared");
 
 console.log("Cloudflared Tunnel Example.");
 main();
