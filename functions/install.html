@@ -13,9 +13,12 @@
 <section class="tsd-panel">
 <ul class="tsd-signatures">
 <li class="">
-<div class="tsd-signature tsd-anchor-link" id="install"><span class="tsd-kind-call-signature">install</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-kind-parameter">version</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#install" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
+<div class="tsd-signature tsd-anchor-link" id="install"><span class="tsd-kind-call-signature">install</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">to</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">,</span> <span class="tsd-kind-parameter">version</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <a href="../interfaces/InstallOptions.html" class="tsd-signature-type tsd-kind-interface">InstallOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#install" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></div>
 <div class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Install cloudflared to the given path.</p>
+<div class="tsd-comment tsd-typography"><p>Install cloudflared to the given path.
+Pass a version string (or omit it) to always download.
+Pass options to install only when missing, below the minimum, or to periodically reinstall an updated version.
+Optional refresh failures keep the installed binary; required installations throw.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -23,13 +26,13 @@
 <li><span><span class="tsd-kind-parameter">to</span>: <span class="tsd-signature-type">string</span></span>
 <div class="tsd-comment tsd-typography"><p>The path to the binary to install.</p>
 </div></li>
-<li><span><span class="tsd-kind-parameter">version</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = CLOUDFLARED_VERSION</span></span>
-<div class="tsd-comment tsd-typography"><p>The version of cloudflared to install.</p>
+<li><span><span class="tsd-kind-parameter">version</span>: <span class="tsd-signature-type">string</span> <span class="tsd-signature-symbol">|</span> <a href="../interfaces/InstallOptions.html" class="tsd-signature-type tsd-kind-interface">InstallOptions</a><span class="tsd-signature-symbol"> = CLOUDFLARED_VERSION</span></span>
+<div class="tsd-comment tsd-typography"><p>A version to download, or options for conditional installation.</p>
 </div></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><p>The path to the binary that was installed.</p>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><p>The path to the installed binary.</p>
 <aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/atlassian-forks/node-cloudflared/blob/ff4840b5796bf54a545a3d2322fc91088ae08a9b/src/install.ts#L38">src/install.ts:38</a></li></ul></aside></div></li></ul></section></div>
+<li>Defined in <a href="https://github.com/atlassian-forks/node-cloudflared/blob/baa505210d3fc05aca2e6a8a6aa2508f3f81f52d/src/install.ts#L52">src/install.ts:52</a></li></ul></aside></div></li></ul></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
