@@ -30,6 +30,9 @@
         "lib",
         "scripts"
     ],
+    "publishConfig": {
+        "registry": "https://packages.atlassian.com/api/npm/npm-public/"
+    },
     "devDependencies": {
         "@atlassian/cloudflared": "workspace:*",
         "@changesets/changelog-github": "^0.7.0",
