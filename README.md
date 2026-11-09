@@ -88,7 +88,7 @@ Library consumers can pass options to `install` before spawning the binary or
 creating a `Tunnel`. Synchronous `Tunnel` constructors do not check for updates.
 
 ```js
-import { bin, install } from "cloudflared";
+import { bin, install } from "@atlassian/cloudflared";
 import { spawn } from "node:child_process";
 
 await install(bin, {
