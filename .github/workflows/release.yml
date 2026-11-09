@@ -15,8 +15,7 @@ jobs:
             contents: write
             issues: write
             pull-requests: write
-            # Lets npm mint a short-lived OIDC token instead of using a long-lived
-            # NPM_TOKEN. Requires a Trusted Publisher pointing at this workflow file.
+            # Needed by artifact-publish-token to get temporary Artifactory credentials.
             id-token: write
         steps:
             - name: Checkout Repository
@@ -30,6 +29,21 @@ jobs:
             - name: Build
               run: pnpm build
 
+            # Publishing goes to Atlassian's Artifactory (see publishConfig in
+            # package.json), which forwards the package to npmjs.
+            - name: Get Artifact Publish Token
+              uses: atlassian-labs/artifact-publish-token@v1.0.1
+              with:
+                  output-modes: npm
+
+            # The action writes ./.npmrc-public, which reads the credentials from
+            # environment variables. Move it to the user config so pnpm uses it and
+            # it can't be committed into the release pull request.
+            - name: Configure Artifactory credentials
+              run: |
+                  cat .npmrc-public >> ~/.npmrc
+                  rm .npmrc-public
+
             - name: Create Release Pull Request or Publish to NPM
               id: changesets
               uses: changesets/action@v1
@@ -39,6 +53,4 @@ jobs:
                   title: Release Packages
                   commit: bump versions
               env:
-                  # No NPM_TOKEN on purpose: changesets/action writes an .npmrc when it
-                  # sees one, and that credential would take precedence over OIDC.
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
