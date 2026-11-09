@@ -1,5 +1,11 @@
 # cloudflared
 
+## 0.8.0
+
+### Minor Changes
+
+- [#2](https://github.com/atlassian-forks/node-cloudflared/pull/2) [`f09ce79`](https://github.com/atlassian-forks/node-cloudflared/commit/f09ce797c5233a088a2e439ccbb3f9fb3d707119) Thanks [@koterpillar](https://github.com/koterpillar)! - Extend `install` with minimum-version enforcement and opt-in periodic updates. Enable periodic CLI updates with `CLOUDFLARED_UPDATE_INTERVAL`. Explicit version pins are preserved, and optional update failures keep the working binary.
+
 ## 0.7.3
 
 ### Patch Changes
