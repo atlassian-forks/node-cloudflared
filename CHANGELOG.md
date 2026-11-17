@@ -1,5 +1,13 @@
 # cloudflared
 
+## 0.9.0
+
+### Minor Changes
+
+- [`b19756e`](https://github.com/atlassian-forks/node-cloudflared/commit/b19756e1c7b197d42ee35e70602c6de51b49fb46) Thanks [@koterpillar](https://github.com/koterpillar)! - Remove the postinstall build and binary download. The CLI still downloads a missing binary on first use.
+  Library consumers must explicitly install the binary or supply an existing executable before using tunnel or service APIs.
+  Offline deployments must download the binary during setup. Source checkouts without lib/ need an explicit build.
+
 ## 0.8.0
 
 ### Minor Changes
